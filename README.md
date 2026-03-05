@@ -398,21 +398,21 @@ y = df[target_col].shift(-self.horizon)  # Auto-adapté
 
 | Rôle | Étudiant | Responsabilités |
 |------|----------|-----------------|
-| **Phase 1** | Étudiant A | Data collection, preprocessing, EDA, stationnarité, visualisations |
-| **Phase 2** | Étudiant B | Feature engineering, modèles, walk-forward, backtest, rapport |
+| **Phase 1** | Safae | Data collection, preprocessing, EDA, stationnarité, visualisations |
+| **Phase 2** | Imane| Feature engineering, modèles, walk-forward, backtest, rapport |
 | **Supervision** | Binôme | Revue de code, validation croisée, conclusions |
 
 ---
 
 ## 📅 **PLANNING DE RÉALISATION**
 
-**Semaine 1 - Étudiant A**
+**Semaine 1 - Safae**
 - J1-2: Téléchargement + preprocessing
 - J3-4: Exploration + visualisations
 - J5: Tests stationnarité
 - J6-7: Documentation + transmission
 
-**Semaine 2 - Étudiant B**
+**Semaine 2 - Imane**
 - J1: Feature engineering + Granger
 - J2-3: Implémentation modèles
 - J4: Walk-forward validation
@@ -437,9 +437,9 @@ Ce projet démontre que:
 
 Projet académique réalisé dans le cadre du cours de Prévision des séries temporelles.
 
-**Auteur:** [Votre nom] & [Nom du binôme]
-**Date:** 2024
-**Contact:** [votre.email@etudiant.fr]
+**Auteur:** Imane boujaj & safae wardi
+**Date:**2026
+**Contact:** imaneboujaj368@gmail.com
 
 ---
 
@@ -466,4 +466,5 @@ Projet académique réalisé dans le cadre du cours de Prévision des séries te
 - ✅ **Expliquer** la structure au correcteur
 - ✅ **Valoriser** le travail réalisé
 - ✅ **Faciliter** la réutilisation
+
 - ✅ **Répondre** directement à la problématique
