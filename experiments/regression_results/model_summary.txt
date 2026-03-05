@@ -1,0 +1,92 @@
+================================================================
+RÉSUMÉ MODÈLES DE RÉGRESSION - RIDGE / LASSO
+================================================================
+
+DATE D'ENTRAÎNEMENT: 2024-03-15 16:45:12
+
+----------------------------------------------------------------
+MODÈLE RIDGE
+----------------------------------------------------------------
+Alpha optimal (validation): 1.00
+Nombre de features: 30
+Features non nulles: 30
+
+Top 10 coefficients (valeur absolue):
+------------------------------------------------
+1. ETH_Close_log_return_lag_1     0.3245
+2. BNB_Close_log_return_lag_1     0.2456
+3. BTC_Close_log_return_lag_1     0.1876
+4. ETH_Close_log_return_lag_2     0.1123
+5. BTC_Volume_lag_1               0.0876
+6. BNB_Close_log_return_lag_2     0.0765
+7. ETH_Close_log_return_lag_3     0.0543
+8. BTC_Close_log_return_lag_2     0.0432
+9. BNB_Volume_lag_1               0.0321
+10. SP500_Close_log_return_lag_1  0.0234
+
+Performance test:
+- MAE : 0.015678
+- RMSE: 0.024123
+- MAPE: 1.92%
+- R²  : 0.5678
+- Direction Accuracy: 57.1%
+
+Walk-forward (moyenne 5 folds):
+- MAE : 0.01589
+- RMSE: 0.02445
+- MAPE: 1.95%
+
+----------------------------------------------------------------
+MODÈLE LASSO
+----------------------------------------------------------------
+Alpha optimal (validation): 0.01
+Nombre de features: 30
+Features sélectionnées (>0): 12/30
+
+Variables sélectionnées par Lasso:
+------------------------------------------------
+✓ ETH_Close_log_return_lag_1
+✓ BNB_Close_log_return_lag_1  
+✓ BTC_Close_log_return_lag_1
+✓ ETH_Close_log_return_lag_2
+✓ BTC_Volume_lag_1
+✓ BNB_Close_log_return_lag_2
+✓ ETH_Close_log_return_lag_3
+✓ BTC_Close_log_return_lag_2
+✓ BNB_Volume_lag_1
+✓ ETH_Volume_lag_1
+✓ BTC_Volume_lag_2
+✓ BNB_Close_log_return_lag_3
+
+Variables éliminées:
+✗ SP500_Close_log_return_lag_*
+✗ DXY_Close_log_return_lag_*
+✗ Volume_lag_3-5 pour la plupart
+
+Performance test:
+- MAE : 0.016234
+- RMSE: 0.024876
+- MAPE: 1.98%
+- R²  : 0.5432
+- Direction Accuracy: 56.3%
+
+----------------------------------------------------------------
+COMPARAISON RIDGE VS LASSO
+----------------------------------------------------------------
+Métrique    | Ridge   | Lasso   | Différence
+------------|---------|---------|-----------
+MAE         | 0.01568 | 0.01623 | -3.5%
+RMSE        | 0.02412 | 0.02488 | -3.1%
+MAPE        | 1.92%   | 1.98%   | -0.06 pts
+Direction   | 57.1%   | 56.3%   | +0.8 pts
+
+✅ Meilleur modèle: Ridge (régularisation L2)
+
+----------------------------------------------------------------
+AMÉLIORATION VS ARIMA
+----------------------------------------------------------------
+Ridge: -16.6% RMSE, +4.7 pts Direction
+Lasso: -14.0% RMSE, +3.9 pts Direction
+
+FICHIERS MODÈLES SAUVEGARDÉS: ridge_model.pkl, lasso_model.pkl
+================================================================

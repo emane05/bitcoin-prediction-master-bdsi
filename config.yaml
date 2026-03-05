@@ -1,0 +1,25 @@
+# config.yaml
+# Configuration globale du projet
+
+# Période d'étude
+start_date: "2020-01-01"
+end_date: "2025-01-01"
+
+# Variables à télécharger
+tickers:
+  BTC: "BTC-USD"
+  ETH: "ETH-USD"
+  BNB: "BNB-USD"
+  SP500: "^GSPC"
+  DXY: "DX-Y.NYB"
+
+# Colonnes à conserver
+columns: ["Close", "Volume"]
+
+# Paramètres de preprocessing
+fill_method: "ffill"  # forward fill pour NaN
+resample_freq: "1D"   # fréquence quotidienne
+
+# Horizon de prévision (à valider avec Élève B)
+forecast_horizon: 1   # H = 1 jour
+max_lags: 10         # Nombre maximal de lags à tester
